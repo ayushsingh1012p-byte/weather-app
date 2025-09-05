@@ -64,6 +64,29 @@
 </style>
 
 
+<div class="container d-flex justify-content-center pt-5">
+    <div class="col-md-6 col-lg-6 p-0 justify-center" style="position: relative; top: 10px;">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="input-group shadow-lg">
+                <!-- Input -->
+                <input type="text" 
+                       name="city" 
+                       class="form-control"
+                       placeholder="🌍 Enter City Name"
+                       style="background: rgba(255,255,255,0.8); border: 2px solid #4facfe; border-radius: 10px 0 0 10px; width: auto;">
+
+                <!-- Button -->
+                <button type="submit" 
+                        class="btn text-white"
+                        style="background: linear-gradient(45deg, #4facfe, #00f2fe); border-radius: 0 10px 10px 0;">
+                    <i class="fa fa-cloud mr-2"></i> Get Weather
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 <div class="container">
     <h3 class="pt-5 text-center">THE WEATHER APP</h3>
@@ -117,7 +140,7 @@
         <div class="col-md-5 col-lg-5">
 
             <div class="card m-1 shadow-lg"
-                style="height: 598px; overflow-y: auto; -ms-overflow-style: none; scrollbar-width: none; background-color: transparent;">
+                style="max-height: 598px; overflow-y: auto; -ms-overflow-style: none; scrollbar-width: none; background-color: transparent;">
                 <div class="card-body" style="background-color: transparent;">
                     <div class="mt-2">
                         <div class="container text-center">
@@ -163,21 +186,8 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="col-md-6 col-lg-6 p-0" style="position: relative; bottom: 10px;">
-                <form method="POST"> {% csrf_token %} <div class="form-group d-flex justify-content-center"> <span
-                            style="display: flex;"> <input type="text" name='city' class="form-control shadow-lg"
-                                placeholder="Enter City Name"
-                                style="width: 300px; margin-right: 10px; background-color: transparent; border: rebeccapurple;">
-                            <button type="submit" class="btn btn-primary h-card"
-                                style="width: 200px; background-color: rgb(52, 61, 225);"><i
-                                    class="fa fa-cloud mr-2"></i>
-                                <h3>Get Weather</h3>
-                            </button> </span> </div>
-                </form>
-            </div>
-        </div>
-    </div>
+        
+
 
     </body>
 
